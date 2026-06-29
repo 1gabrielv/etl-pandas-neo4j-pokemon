@@ -3,7 +3,7 @@ import numpy as np
 import random
 
 # 1. Lê o seu arquivo original completo (as 1303 linhas)
-df = pd.read_csv("pokemon_competitive_analysis.csv")
+df = pd.read_csv("data/arquivo_base.csv")
 
 # Listas de "sujeiras"
 termos_no_usage = ["NoUsage", "no usage", "none", "NO", "NULL", "N/A", "   ", "-", "zero"]
@@ -41,5 +41,5 @@ df['generation'] = df['generation'].astype(str).apply(lambda x:
 )
 
 # 5. Exporta o arquivo final sujo para você usar no trabalho!
-df.to_csv("pokemon_sujo_para_etl.csv", index=False)
-print("✓ Arquivo 'pokemon_sujo_para_etl.csv' com 1300 linhas corrompidas gerado com sucesso!")
+df.to_csv("data/pokemon_competitive_analysis.csv", index=False)
+print("✓ Arquivo 'data/pokemon_competitive_analysis.csv' com 1300 linhas corrompidas gerado com sucesso!")
