@@ -37,7 +37,7 @@ Focadas em validar a integridade anatômica do banco após a ingestão.
 * **Consulta 3:** As 10 habilidades mais comuns integradas à Pokédex.
 
 ### 2. Consultas Complexas (Interconexão Multidimensional de Caminhos)
-Explotam o verdadeiro poder de um banco de grafos, realizando múltiplos saltos por setas e nós vizinhos sem depender de tabelas engessadas.
+Exploram o verdadeiro poder de um banco de grafos, realizando múltiplos saltos por setas e nós vizinhos sem depender de tabelas engessadas.
 * **Consulta 4:** Rastreamento do caminho da dominância de habilidades ocultas raras em torneios com corte crítico de uso de 15% em 2024 (`Torneio -> Seta de Uso -> Pokemon -> Habilidade Oculta`).
 * **Consulta 5 (Sinergia Elemental):** Consulta puramente em formato de "V" que localiza interseções conceituais opostas. Descobre quais Pokémon de elementos conflitantes (`Fire` e `Water`) compartilham a exata mesma habilidade.
 * **Consulta 6 (A Teia Completa):** Mapeamento hierárquico máximo que cruza simultaneamente 4 nós (`Torneio -> Competicao -> Pokemon -> Tipo -> Habilidade`) para trazer a foto instantânea dos líderes de 2024.
@@ -64,7 +64,15 @@ Extração de inteligência competitiva e análise de tendências temporais agre
 ## 🚀 Como Executar
 
 1. Certifique-se de ter as credenciais do Neo4j configuradas em seu arquivo `.env`:
-   ```env
-   NEO4J_URI=bolt://localhost:7687
-   NEO4J_USERNAME=neo4j
-   NEO4J_PASSWORD=sua_senha
+```env
+NEO4J_URI=bolt://localhost:7687
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=sua_senha
+```
+
+2. Instale as dependências necessárias:
+```bash
+pip install pandas numpy fastparquet neo4j python-dotenv
+```
+
+3. Execute o arquivo Jupyter Notebook `arrumar.ipynb` célula a célula para acionar o pipeline de processamento, geração do arquivo Parquet, ingestão em lote no Neo4j e exibição dos DataFrames resultantes do painel analítico.
